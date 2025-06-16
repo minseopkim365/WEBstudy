@@ -12,29 +12,30 @@
 
     img {
       width: 100vw;
-      height: auto;
+      height: 100vh;
+      object-fit: cover;
       display: block;
     }
 
-    /* 홈 텍스트 위 클릭 가능한 투명 박스 */
+    /* "홈" 텍스트에 해당하는 클릭 가능한 투명 박스 */
     .home-link {
       position: absolute;
-      top: 28px;       /* 수직 위치: 상단 메뉴바 위치에 맞춤 */
-      left: 145px;     /* 수평 위치: "홈" 글자 위에 맞춤 */
-      width: 45px;     /* 넓이: 한글 1~2자 크기 */
-      height: 30px;    /* 높이: 메뉴바 높이 */
+      top: 28px;      /* 수직 위치: 상단에서 28px */
+      left: 100px;    /* 수평 위치: 왼쪽에서 100px (홈 텍스트 위치에 맞춤) */
+      width: 45px;    /* 너비: 글자 길이에 맞춤 */
+      height: 30px;   /* 높이: 클릭 가능 영역 확보 */
       z-index: 10;
       cursor: pointer;
-      /* background: rgba(255,0,0,0.3);  디버깅용 배경 (테스트 시만 사용) */
+      /* background: rgba(255, 0, 0, 0.3); */ /* 개발 중 위치 확인용 (원하면 주석 해제) */
     }
   </style>
 </head>
 <body>
 
-  <!-- 홈으로 이동하는 투명 클릭박스 -->
+  <!-- 메인 페이지로 이동하는 투명 링크 박스 -->
   <a href="index.html" class="home-link"></a>
 
-  <!-- 결제 이미지 -->
+  <!-- 결제창 이미지 -->
   <img src="pay.jpg" alt="결제 이미지" />
 
 </body>
