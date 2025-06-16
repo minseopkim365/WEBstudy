@@ -15,30 +15,41 @@
       height: 100vh;
       object-fit: cover;
       display: block;
-      position: relative;
-      z-index: 1;
     }
 
-    .click-area {
+    /* 결제창 클릭 영역 */
+    .click-pay {
       position: absolute;
-      top: 30px;       /* 아래로 약간 내림 */
-      left: 580px;     /* ⬅ 왼쪽으로 이동 */
-      width: 110px;    /* ➡ 폭 확장해서 전체 텍스트 커버 */
-      height: 40px;
+      top: 28px;
+      left: 665px;
+      width: 60px;
+      height: 30px;
       z-index: 10;
       display: block;
       cursor: pointer;
-      /* background: rgba(255, 0, 0, 0.2); */ /* 테스트용 */
+      /* background: rgba(255, 0, 0, 0.3);  테스트용 */
+    }
+
+    /* 내 정보 클릭 영역 */
+    .click-info {
+      position: absolute;
+      top: 28px;
+      left: 805px;
+      width: 75px;
+      height: 30px;
+      z-index: 10;
+      display: block;
+      cursor: pointer;
+      /* background: rgba(0, 255, 0, 0.3);  테스트용 */
     }
   </style>
 </head>
 <body>
+  <!-- 클릭 가능한 투명 박스들 -->
+  <a href="pay.html" class="click-pay"></a>
+  <a href="info.html" class="click-info"></a>
 
-  <!-- ✅ '결제창' 텍스트 클릭 영역 -->
-  <a href="pay.html" class="click-area"></a>
-
-  <!-- ✅ 메인 이미지 -->
+  <!-- 메인 이미지 -->
   <img src="main.jpg" alt="메인 이미지" />
-
 </body>
 </html>
