@@ -9,35 +9,32 @@
       margin: 0;
       background: #000;
     }
+
     img {
       width: 100vw;
       height: 100vh;
       object-fit: cover;
       display: block;
     }
-    .nav {
+
+    .click-area {
       position: absolute;
       top: 20px;
-      left: 30px;
+      left: 475px;
+      width: 60px;
+      height: 35px;
       z-index: 10;
-    }
-    .nav a {
-      color: white;
-      font-size: 20px;
-      text-decoration: none;
-      margin-right: 20px;
-      font-weight: bold;
-      background: rgba(0,0,0,0.5);
-      padding: 6px 12px;
-      border-radius: 6px;
-      cursor: pointer;
+      display: block;
+      /* 테스트용 스타일 - 위치 조정 시만 사용 */
+      /* background: rgba(255, 0, 0, 0.3); */
     }
   </style>
 </head>
 <body>
-  <div class="nav">
-    <a href="pay.html">결제창</a>
-  </div>
+  <!-- 네비바의 '결제창' 위치에 클릭 가능한 투명 링크 -->
+  <a href="pay.html" class="click-area"></a>
+
+  <!-- 메인 이미지 -->
   <img src="main.jpg" alt="메인 이미지" />
 </body>
 </html>
