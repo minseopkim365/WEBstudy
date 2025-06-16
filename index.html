@@ -19,22 +19,23 @@
 
     .click-area {
       position: absolute;
-      top: 20px;
-      left: 475px;
-      width: 60px;
-      height: 35px;
-      z-index: 10;
+      top: 22px;        /* 결제창 텍스트 위치 (세로) */
+      left: 478px;      /* 결제창 텍스트 위치 (가로) */
+      width: 64px;      /* 글자 너비 */
+      height: 30px;     /* 글자 높이 */
+      z-index: 1000;    /* 무조건 이미지보다 위로 */
       display: block;
-      /* 테스트용 스타일 - 위치 조정 시만 사용 */
+      cursor: pointer;
+      /* 아래는 테스트용 박스, 위치 잡을 때만 사용하세요 */
       /* background: rgba(255, 0, 0, 0.3); */
     }
   </style>
 </head>
 <body>
-  <!-- 네비바의 '결제창' 위치에 클릭 가능한 투명 링크 -->
+  <!-- 투명한 클릭 영역 -->
   <a href="pay.html" class="click-area"></a>
 
-  <!-- 메인 이미지 -->
+  <!-- 배경 이미지 -->
   <img src="main.jpg" alt="메인 이미지" />
 </body>
 </html>
