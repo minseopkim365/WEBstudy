@@ -19,21 +19,19 @@
     /* 홈 텍스트 위 클릭 가능한 투명 박스 */
     .home-link {
       position: absolute;
-      top: 28px;      /* 수직 위치 조정 */
-      left: 60px;     /* 수평 위치 조정: 글씨 기준으로 맞춤 */
-      width: 50px;    /* 영역 너비 (한글 한 글자 기준) */
-      height: 30px;   /* 영역 높이 */
+      top: 28px;       /* 수직 위치: 상단 메뉴바 위치에 맞춤 */
+      left: 145px;     /* 수평 위치: "홈" 글자 위에 맞춤 */
+      width: 45px;     /* 넓이: 한글 1~2자 크기 */
+      height: 30px;    /* 높이: 메뉴바 높이 */
       z-index: 10;
       cursor: pointer;
+      /* background: rgba(255,0,0,0.3);  디버깅용 배경 (테스트 시만 사용) */
     }
-
-    /* 디버깅용 배경 (필요 시만 사용) */
-    /* .home-link { background: rgba(255,0,0,0.2); } */
   </style>
 </head>
 <body>
 
-  <!-- 홈으로 돌아가는 투명 링크 박스 -->
+  <!-- 홈으로 이동하는 투명 클릭박스 -->
   <a href="index.html" class="home-link"></a>
 
   <!-- 결제 이미지 -->
