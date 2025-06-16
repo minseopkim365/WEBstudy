@@ -15,28 +15,30 @@
       height: 100vh;
       object-fit: cover;
       display: block;
+      position: relative;
+      z-index: 1;
     }
 
-    /* 클릭 가능한 투명 박스 */
     .click-area {
       position: absolute;
-      top: 28px;       /* 수직 위치 */
-      left: 655px;     /* 수평 위치 */
-      width: 60px;     /* 링크 영역 너비 */
-      height: 30px;    /* 링크 영역 높이 */
+      top: 25px;       /* 클릭영역 Y축 위치 */
+      left: 655px;     /* 클릭영역 X축 위치 */
+      width: 85px;     /* 👉 더 넓게 키움 */
+      height: 40px;    /* 👉 더 높게 키움 */
       z-index: 10;
       display: block;
-      cursor: pointer;
-      /* 테스트 시 아래 배경 켜서 위치 확인 가능 */
-      /* background: rgba(255, 0, 0, 0.3); */
+      cursor: pointer; /* ✅ 손가락 모양 커서 표시 */
+      /* background: rgba(255, 0, 0, 0.2); */ /* 테스트 시 주석 해제 */
     }
   </style>
 </head>
 <body>
-  <!-- ✅ '결제창' 텍스트 위 클릭 링크 -->
+
+  <!-- ✅ '결제창' 클릭 영역 -->
   <a href="pay.html" class="click-area"></a>
 
-  <!-- 🖼️ 메인 이미지 -->
+  <!-- ✅ 메인 이미지 -->
   <img src="main.jpg" alt="메인 이미지" />
+
 </body>
 </html>
