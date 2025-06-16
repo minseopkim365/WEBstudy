@@ -19,27 +19,27 @@
       z-index: 1;
     }
 
+    /* ✅ '홈' 글씨에만 클릭 가능하게 하는 투명 박스 */
     .home-click {
       position: absolute;
-      top: 30px;      /* 홈 위치 세로 */
-      left: 150px;    /* 홈 위치 가로 (화면에 맞게 조정 가능) */
-      width: 50px;    /* 글자보다 살짝 여유 있게 */
-      height: 40px;
+      top: 26px;     /* 세로 위치 조정 */
+      left: 52px;    /* 가로 위치 조정 (홈 글자 시작점) */
+      width: 50px;   /* 너비 조정 */
+      height: 40px;  /* 높이 조정 */
       z-index: 10;
       cursor: pointer;
       display: block;
-      /* background: rgba(0,255,0,0.2); */ /* 위치 테스트 시 주석 제거 */
+      /* background: rgba(255, 0, 0, 0.2); */ /* 박스 보이게 하려면 주석 제거 */
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ "홈" 글자 클릭 영역 -->
+  <!-- ✅ '홈' 텍스트 위에 클릭 가능한 투명 링크 -->
   <a href="index.html" class="home-click"></a>
 
-  <!-- ✅ 결제창 이미지 -->
+  <!-- ✅ 배경 이미지 -->
   <img src="pay.jpg" alt="결제창 이미지" />
 
 </body>
 </html>
-
