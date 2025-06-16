@@ -17,11 +17,11 @@
       display: block;
     }
 
-    /* 결제창 클릭 영역 (한 칸 오른쪽으로 이동) */
+    /* 결제창 클릭 영역 (내정보 기준 왼쪽) */
     .click-pay {
       position: absolute;
-      top: 25px;
-      left: 810px;  /* 기존: 800px → +10px */
+      top: 28px;
+      left: 620px; /* ← 왼쪽으로 살짝 옮긴 위치 */
       width: 60px;
       height: 30px;
       z-index: 10;
@@ -29,11 +29,11 @@
       cursor: pointer;
     }
 
-    /* 내정보 클릭 영역 (두 칸 오른쪽으로 이동) */
+    /* 내정보 클릭 영역 (텍스트 위 정렬) */
     .click-info {
       position: absolute;
-      top: 25px;
-      left: 830px;  /* 기존: 810px → +20px */
+      top: 28px;
+      left: 745px; /* ← 기존 805px에서 왼쪽으로 조정 */
       width: 75px;
       height: 30px;
       z-index: 10;
@@ -44,7 +44,7 @@
 </head>
 <body>
 
-  <!-- 투명 클릭 박스 -->
+  <!-- 투명 클릭 박스들 -->
   <a href="pay.html" class="click-pay"></a>
   <a href="info.html" class="click-info"></a>
 
@@ -53,3 +53,4 @@
 
 </body>
 </html>
+
