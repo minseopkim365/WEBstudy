@@ -17,7 +17,7 @@
       display: block;
     }
 
-    /* 공통 투명 박스 스타일 */
+    /* 공통 투명 박스 */
     .click-box {
       position: absolute;
       top: 28px;
@@ -28,7 +28,7 @@
       cursor: pointer;
     }
 
-    /* 개별 위치 설정 */
+    /* 위치별 클래스 */
     .click-pay {
       left: 665px;
     }
@@ -38,22 +38,15 @@
     }
 
     .click-my {
-      left: 945px; /* ← 내정보 위치 (수정 가능) */
-    }
-
-    .click-box span {
-      display: block;
-      width: 100%;
-      height: 100%;
+      left: 945px;
     }
   </style>
 </head>
 <body>
 
-  <!-- 클릭 박스들 -->
-  <a href="pay.html" class="click-box click-pay"><span></span></a>
-  <a href="info.html" class="click-box click-info"><span></span></a>
-  <a href="info.html" class="click-box click-my"><span></span></a>
+  <!-- 클릭 가능한 투명 링크 박스 -->
+  <a href="pay.html" class="click-box click-pay"></a>
+  <a href="info.html" class="click-box click-my"></a>
 
   <!-- 메인 이미지 -->
   <img src="main.jpg" alt="메인 이미지" />
