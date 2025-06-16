@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>메인페이지</title>
+  <title>내 정보</title>
   <style>
     body {
       margin: 0;
@@ -17,45 +17,28 @@
       display: block;
     }
 
-    /* 클릭 가능 영역 공통 */
-    .click-area, .click-home, .click-info {
+    /* "홈" 텍스트 위치에 맞춘 투명 클릭 박스 */
+    .home-link {
       position: absolute;
       top: 28px;
-      width: 70px;
+      left: 100px;
+      width: 45px;
       height: 30px;
-      cursor: pointer;
       z-index: 10;
-    }
-
-    /* 결제창 */
-    .click-area {
-      left: 660px;
-      /* background: rgba(255, 0, 0, 0.3); */ /* 확인용 배경 (필요 시 제거) */
-    }
-
-    /* 홈 */
-    .click-home {
-      left: 165px;
-      /* background: rgba(0, 255, 0, 0.3); */
-    }
-
-    /* 내 정보 */
-    .click-info {
-      left: 800px;
-      /* background: rgba(0, 0, 255, 0.3); */
+      cursor: pointer;
+      /* background: rgba(0, 255, 0, 0.3); */ /* 필요 시 위치 확인용 */
     }
   </style>
 </head>
 <body>
 
-  <!-- 투명 클릭 박스들 -->
-  <a href="pay.html" class="click-area"></a>
-  <a href="index.html" class="click-home"></a>
-  <a href="info.html" class="click-info"></a>
+  <!-- 홈으로 이동하는 투명 박스 -->
+  <a href="index.html" class="home-link"></a>
 
-  <!-- 배경 이미지 -->
-  <img src="main.jpg" alt="메인 이미지" />
+  <!-- 내 정보 이미지 -->
+  <img src="info.jpeg" alt="내 정보 이미지" />
 
 </body>
 </html>
+
 
