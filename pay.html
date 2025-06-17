@@ -8,49 +8,50 @@
     body {
       margin: 0;
       background: #000;
-      overflow-y: auto;
-      position: relative;
+      color: #fff;
+      overflow-x: hidden;
     }
 
     .container {
-      position: relative;
-      width: 100%;
       max-width: 1000px;
       margin: 0 auto;
+      padding: 20px;
     }
 
-    .main-img {
+    img {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    /* 클릭 가능한 투명 버튼 */
+    /* 홈 버튼 (왼쪽 상단) */
     .home-link {
       position: absolute;
-      top: 25px;
-      left: 10vw;
-      width: 50px;
-      height: 30px;
-      background: rgba(255, 255, 255, 0.3);
+      top: 20px;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
       z-index: 10;
       cursor: pointer;
-      border-radius: 8px;
     }
 
-    .home-link:hover {
-      background: rgba(255, 255, 255, 0.5);
+    /* 반응형 여유 */
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- 홈으로 이동하는 투명 버튼 -->
-    <a href="index.html" class="home-link"></a>
+  <!-- 홈으로 돌아가는 투명 버튼 -->
+  <a href="index.html" class="home-link" title="홈으로 이동"></a>
 
-    <!-- 결제 이미지 -->
-    <img src="pay.jpg" alt="결제 이미지" class="main-img" />
+  <!-- 전체 콘텐츠 -->
+  <div class="container">
+    <img src="pay.jpg" alt="결제 이미지" />
   </div>
 
 </body>
