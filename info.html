@@ -12,15 +12,10 @@
       overflow-y: auto;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
     img {
-      width: 100%;
-      height: auto;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
       display: block;
     }
 
@@ -35,23 +30,16 @@
       cursor: pointer;
       border-radius: 6px;
     }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 10px;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- 홈으로 가는 투명버튼 -->
+  <!-- 홈으로 돌아가기 버튼 -->
   <a href="index.html" class="home-link" title="홈으로 이동"></a>
 
-  <!-- 내정보 이미지 콘텐츠 -->
-  <div class="container">
-    <img src="info.jpeg" alt="내 정보 이미지" />
-  </div>
+  <!-- 내정보 이미지 전체화면으로 -->
+  <img src="info.jpeg" alt="내 정보 이미지" />
 
 </body>
 </html>
+
