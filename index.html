@@ -8,36 +8,36 @@
     body {
       margin: 0;
       background: #000;
-      overflow-y: auto; /* 스크롤 가능하도록 설정 */
+      overflow-y: scroll;
     }
 
     img {
       width: 100vw;
       height: auto;
-      object-fit: cover;
       display: block;
     }
 
-    /* 공통 반투명 버튼 스타일 */
+    /* 반투명 버튼 공통 스타일 */
     .click-btn {
       position: absolute;
-      top: 40px;
-      padding: 5px 10px;
+      top: 18px;
+      padding: 4px 10px;
       background: rgba(255, 255, 255, 0.3);
       color: black;
-      border-radius: 6px;
+      border-radius: 5px;
       font-size: 14px;
       font-weight: bold;
       text-decoration: none;
       z-index: 10;
       cursor: pointer;
+      transition: background 0.3s;
     }
 
     .click-btn:hover {
       background: rgba(255, 255, 255, 0.6);
     }
 
-    /* 각 버튼의 위치 조정 */
+    /* 개별 버튼 위치 조정 */
     .click-home {
       left: 240px;
     }
@@ -53,12 +53,12 @@
 </head>
 <body>
 
-  <!-- 반투명 버튼 링크 -->
+  <!-- 반투명 네비게이션 버튼들 -->
   <a href="index.html" class="click-btn click-home">홈</a>
   <a href="pay.html" class="click-btn click-pay">결제창</a>
   <a href="info.html" class="click-btn click-info">내정보</a>
 
-  <!-- 메인 배경 이미지 -->
+  <!-- 메인 이미지 -->
   <img src="main.jpg" alt="메인 이미지" />
 
 </body>
