@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>내정보</title>
+  <title>메인페이지</title>
   <style>
     body {
       margin: 0;
@@ -12,29 +12,47 @@
 
     img {
       width: 100%;
-      height: auto; /* ✅ 스크롤 가능하도록 설정 */
+      height: auto; /* 스크롤 가능하게 */
       display: block;
     }
 
-    /* 홈으로 가는 투명 박스 */
-    .home-link {
+    /* 공통 버튼 스타일 */
+    .click-btn {
       position: absolute;
-      top: 28px;
-      left: 100px;
-      width: 45px;
-      height: 30px;
-      z-index: 10;
+      top: 20px;
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.3); /* ✅ 반투명 흰색 */
+      color: black;
+      border-radius: 8px;
+      font-weight: bold;
       cursor: pointer;
+      z-index: 10;
+      text-decoration: none;
+    }
+
+    .click-btn:hover {
+      background: rgba(255, 255, 255, 0.6); /* 마우스 올리면 더 선명하게 */
+    }
+
+    /* 결제창 위치 */
+    .click-pay {
+      left: 850px;
+    }
+
+    /* 내정보 위치 */
+    .click-info {
+      left: 940px;
     }
   </style>
 </head>
 <body>
 
-  <!-- 메인 페이지로 이동하는 투명 링크 박스 -->
-  <a href="index.html" class="home-link"></a>
+  <!-- 반투명 버튼들 -->
+  <a href="pay.html" class="click-btn click-pay">결제창</a>
+  <a href="info.html" class="click-btn click-info">내정보</a>
 
-  <!-- 내정보 이미지 -->
-  <img src="info.jpeg" alt="내 정보 이미지" />
+  <!-- 메인 이미지 -->
+  <img src="main.jpg" alt="메인 이미지" />
 
 </body>
 </html>
