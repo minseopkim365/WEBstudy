@@ -11,22 +11,20 @@
     }
 
     img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
+      width: 100%;
+      height: auto; /* ✅ 스크롤 가능하도록 */
       display: block;
     }
 
     /* "홈" 텍스트에 해당하는 클릭 가능한 투명 박스 */
     .home-link {
       position: absolute;
-      top: 28px;      /* 수직 위치: 상단에서 28px */
-      left: 100px;    /* 수평 위치: 왼쪽에서 100px (홈 텍스트 위치에 맞춤) */
-      width: 45px;    /* 너비: 글자 길이에 맞춤 */
-      height: 30px;   /* 높이: 클릭 가능 영역 확보 */
+      top: 28px;
+      left: 100px;
+      width: 45px;
+      height: 30px;
       z-index: 10;
       cursor: pointer;
-      /* background: rgba(255, 0, 0, 0.3); */ /* 개발 중 위치 확인용 (원하면 주석 해제) */
     }
   </style>
 </head>
