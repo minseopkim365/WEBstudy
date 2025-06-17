@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>내정보</title>
   <style>
     body {
@@ -10,16 +11,30 @@
     }
 
     img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
+      width: 100%;
+      height: auto; /* ✅ 스크롤 가능하도록 설정 */
       display: block;
+    }
+
+    /* 홈으로 가는 투명 박스 */
+    .home-link {
+      position: absolute;
+      top: 28px;
+      left: 100px;
+      width: 45px;
+      height: 30px;
+      z-index: 10;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
+
+  <!-- 메인 페이지로 이동하는 투명 링크 박스 -->
+  <a href="index.html" class="home-link"></a>
+
+  <!-- 내정보 이미지 -->
   <img src="info.jpeg" alt="내 정보 이미지" />
+
 </body>
 </html>
-
-
