@@ -8,71 +8,53 @@
     body {
       margin: 0;
       background: #000;
-      overflow-x: hidden;
-    }
-
-    .container {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
     }
 
     img {
-      width: 100%;
-      height: auto;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
       display: block;
     }
 
-    /* 반투명 버튼 스타일 공통 */
-    .click-area {
+    /* 클릭 가능 영역 공통 */
+    .click-area, .click-home, .click-info {
       position: absolute;
-      top: 20px;
+      top: 28px;
+      width: 70px;
       height: 30px;
-      background: rgba(255, 255, 255, 0.1); /* 반투명 시각 확인용 */
       cursor: pointer;
       z-index: 10;
     }
 
-    /* 각 버튼의 개별 위치 조정 (상대 위치) */
+    /* 결제창 */
+    .click-area {
+      left: 660px;
+      /* background: rgba(255, 0, 0, 0.3); */ /* 확인용 배경 (필요 시 제거) */
+    }
+
+    /* 홈 */
     .click-home {
-      left: 100px;
-      width: 40px;
+      left: 165px;
+      /* background: rgba(0, 255, 0, 0.3); */
     }
 
-    .click-pay {
-      left: 620px;
-      width: 60px;
-    }
-
+    /* 내 정보 */
     .click-info {
-      left: 745px;
-      width: 75px;
-    }
-
-    @media (max-width: 768px) {
-      .click-pay {
-        left: 50%;
-        transform: translateX(-60px);
-      }
-      .click-info {
-        left: 50%;
-        transform: translateX(30px);
-      }
+      left: 800px;
+      /* background: rgba(0, 0, 255, 0.3); */
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- 투명 클릭 박스들 -->
-    <a href="index.html" class="click-area click-home"></a>
-    <a href="pay.html" class="click-area click-pay"></a>
-    <a href="info.html" class="click-area click-info"></a>
+  <!-- 투명 클릭 박스들 -->
+  <a href="pay.html" class="click-area"></a>
+  <a href="index.html" class="click-home"></a>
+  <a href="info.html" class="click-info"></a>
 
-    <!-- 메인 이미지 -->
-    <img src="main.jpg" alt="메인 이미지" />
-  </div>
+  <!-- 배경 이미지 -->
+  <img src="main.jpg" alt="메인 이미지" />
 
 </body>
 </html>
