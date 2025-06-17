@@ -8,50 +8,57 @@
     body {
       margin: 0;
       background: #000;
+      overflow-y: auto; /* 스크롤 가능하도록 설정 */
     }
 
     img {
-      width: 100%;
-      height: auto; /* 스크롤 가능하게 */
+      width: 100vw;
+      height: auto;
+      object-fit: cover;
       display: block;
     }
 
-    /* 공통 버튼 스타일 */
+    /* 공통 반투명 버튼 스타일 */
     .click-btn {
       position: absolute;
-      top: 20px;
-      padding: 6px 12px;
-      background: rgba(255, 255, 255, 0.3); /* ✅ 반투명 흰색 */
+      top: 40px;
+      padding: 5px 10px;
+      background: rgba(255, 255, 255, 0.3);
       color: black;
-      border-radius: 8px;
+      border-radius: 6px;
+      font-size: 14px;
       font-weight: bold;
-      cursor: pointer;
-      z-index: 10;
       text-decoration: none;
+      z-index: 10;
+      cursor: pointer;
     }
 
     .click-btn:hover {
-      background: rgba(255, 255, 255, 0.6); /* 마우스 올리면 더 선명하게 */
+      background: rgba(255, 255, 255, 0.6);
     }
 
-    /* 결제창 위치 */
+    /* 각 버튼의 위치 조정 */
+    .click-home {
+      left: 240px;
+    }
+
     .click-pay {
-      left: 850px;
+      left: 880px;
     }
 
-    /* 내정보 위치 */
     .click-info {
-      left: 940px;
+      left: 970px;
     }
   </style>
 </head>
 <body>
 
-  <!-- 반투명 버튼들 -->
+  <!-- 반투명 버튼 링크 -->
+  <a href="index.html" class="click-btn click-home">홈</a>
   <a href="pay.html" class="click-btn click-pay">결제창</a>
   <a href="info.html" class="click-btn click-info">내정보</a>
 
-  <!-- 메인 이미지 -->
+  <!-- 메인 배경 이미지 -->
   <img src="main.jpg" alt="메인 이미지" />
 
 </body>
