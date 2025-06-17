@@ -8,63 +8,57 @@
     body {
       margin: 0;
       background: #000;
-      overflow-y: scroll;
-    }
-
-    .container {
-      position: relative;
-      width: 100vw;
-      max-width: 100%;
+      overflow-y: auto;
     }
 
     img {
-      width: 100%;
+      width: 100vw;
       height: auto;
       display: block;
+      object-fit: contain;
     }
 
-    /* 공통 버튼 스타일 */
+    /* 공통 클릭 버튼 스타일 */
     .click-btn {
       position: absolute;
-      top: 3.5vw; /* 상단에서 거리 (반응형) */
-      height: 3vw;
-      padding: 0.5vw 1vw;
-      border-radius: 5px;
-      background: rgba(255, 255, 255, 0.3); /* 반투명 배경 */
-      text-decoration: none;
+      top: 25px;
+      width: 60px;
+      height: 30px;
+      background: rgba(255, 255, 255, 0.3);
       z-index: 10;
+      display: block;
       cursor: pointer;
+      border-radius: 8px;
     }
 
-    .click-btn:hover {
-      background: rgba(255, 255, 255, 0.6);
+    /* 반응형 위치 지정 (vw 단위) */
+    .click-home {
+      left: 10vw;
     }
 
-    /* 개별 버튼 위치 (이미지 기준 상대 위치) */
     .click-pay {
-      left: 68%;
+      left: 65vw;
     }
 
     .click-info {
-      left: 77%;
+      left: 75vw;
     }
 
-    .click-home {
-      left: 12%;
+    /* 링크 배경 hover 효과 (선택) */
+    .click-btn:hover {
+      background: rgba(255, 255, 255, 0.5);
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- 반투명 버튼들 -->
-    <a href="index.html" class="click-btn click-home">홈</a>
-    <a href="pay.html" class="click-btn click-pay">결제창</a>
-    <a href="info.html" class="click-btn click-info">내정보</a>
+  <!-- 클릭 가능한 반투명 버튼 -->
+  <a href="index.html" class="click-btn click-home"></a>
+  <a href="pay.html" class="click-btn click-pay"></a>
+  <a href="info.html" class="click-btn click-info"></a>
 
-    <!-- 배경 메인 이미지 -->
-    <img src="main.jpg" alt="메인 이미지" />
-  </div>
+  <!-- 메인 이미지 -->
+  <img src="main.jpg" alt="메인 이미지" />
 
 </body>
 </html>
