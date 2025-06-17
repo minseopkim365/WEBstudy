@@ -8,32 +8,57 @@
     body {
       margin: 0;
       background: #000;
+      overflow-y: auto; /* 스크롤 가능 */
     }
 
     img {
-      width: 100%;
-      height: auto; /* ✅ 스크롤 가능하도록 */
+      width: 100vw;
+      height: auto;
+      object-fit: cover;
       display: block;
     }
 
-    /* "홈" 텍스트에 해당하는 클릭 가능한 투명 박스 */
-    .home-link {
+    /* 공통 반투명 버튼 스타일 */
+    .click-btn {
       position: absolute;
-      top: 28px;
-      left: 100px;
-      width: 45px;
-      height: 30px;
+      top: 40px;
+      padding: 5px 10px;
+      background: rgba(255, 255, 255, 0.3);
+      color: black;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
       z-index: 10;
       cursor: pointer;
+    }
+
+    .click-btn:hover {
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    /* 위치 조정 */
+    .click-home {
+      left: 240px;
+    }
+
+    .click-pay {
+      left: 880px;
+    }
+
+    .click-info {
+      left: 970px;
     }
   </style>
 </head>
 <body>
 
-  <!-- 메인 페이지로 이동하는 투명 링크 박스 -->
-  <a href="index.html" class="home-link"></a>
+  <!-- 반투명 버튼들 -->
+  <a href="index.html" class="click-btn click-home">홈</a>
+  <a href="pay.html" class="click-btn click-pay">결제창</a>
+  <a href="info.html" class="click-btn click-info">내정보</a>
 
-  <!-- 결제창 이미지 -->
+  <!-- 결제 이미지 -->
   <img src="pay.jpg" alt="결제 이미지" />
 
 </body>
