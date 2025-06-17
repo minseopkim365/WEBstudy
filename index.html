@@ -5,56 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>메인페이지</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
       background: #000;
     }
 
+    body {
+      position: relative;
+    }
+
     img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
+      width: 100%;
+      height: auto;
       display: block;
     }
 
-    /* 클릭 가능 영역 공통 */
-    .click-area, .click-home, .click-info {
+    /* 스크롤 가능하도록 */
+    .content {
+      min-height: 150vh; /* 페이지 길이를 늘림 */
+    }
+
+    /* 반투명 버튼 공통 스타일 */
+    .btn-transparent {
       position: absolute;
       top: 28px;
-      width: 70px;
+      width: 60px;
       height: 30px;
-      cursor: pointer;
       z-index: 10;
+      display: block;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.1); /* 반투명 효과 */
+      border-radius: 4px;
     }
 
-    /* 결제창 */
-    .click-area {
-      left: 660px;
-      /* background: rgba(255, 0, 0, 0.3); */ /* 확인용 배경 (필요 시 제거) */
-    }
-
-    /* 홈 */
     .click-home {
       left: 165px;
-      /* background: rgba(0, 255, 0, 0.3); */
     }
 
-    /* 내 정보 */
+    .click-pay {
+      left: 620px;
+    }
+
     .click-info {
-      left: 800px;
-      /* background: rgba(0, 0, 255, 0.3); */
+      left: 745px;
+      width: 75px;
     }
   </style>
 </head>
 <body>
 
-  <!-- 투명 클릭 박스들 -->
-  <a href="pay.html" class="click-area"></a>
-  <a href="index.html" class="click-home"></a>
-  <a href="info.html" class="click-info"></a>
+  <!-- 투명 클릭 버튼들 -->
+  <a href="index.html" class="btn-transparent click-home" title="홈으로 이동"></a>
+  <a href="pay.html" class="btn-transparent click-pay" title="결제창"></a>
+  <a href="info.html" class="btn-transparent click-info" title="내정보"></a>
 
-  <!-- 배경 이미지 -->
-  <img src="main.jpg" alt="메인 이미지" />
+  <!-- 콘텐츠 -->
+  <div class="content">
+    <img src="main.jpg" alt="메인 이미지" />
+  </div>
 
 </body>
 </html>
