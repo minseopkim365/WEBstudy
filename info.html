@@ -3,63 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>메인페이지</title>
+  <title>내 정보</title>
   <style>
     body {
       margin: 0;
       background: #000;
-      overflow-y: auto; /* 세로 스크롤 허용 */
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
     img {
-      width: 100vw;
+      width: 100%;
       height: auto;
-      object-fit: cover;
       display: block;
     }
 
-    /* 공통 반투명 버튼 스타일 */
-    .click-btn {
+    /* 홈 버튼 (왼쪽 상단) */
+    .home-link {
       position: absolute;
-      top: 40px;
-      padding: 5px 10px;
-      background: rgba(255, 255, 255, 0.3);
-      color: black;
-      border-radius: 6px;
-      font-size: 14px;
-      font-weight: bold;
-      text-decoration: none;
+      top: 20px;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
       z-index: 10;
       cursor: pointer;
     }
 
-    .click-btn:hover {
-      background: rgba(255, 255, 255, 0.6);
-    }
-
-    /* 각각의 위치 조정 */
-    .click-home {
-      left: 240px;
-    }
-
-    .click-pay {
-      left: 880px;
-    }
-
-    .click-info {
-      left: 970px;
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- 반투명 버튼들 -->
-  <a href="index.html" class="click-btn click-home">홈</a>
-  <a href="pay.html" class="click-btn click-pay">결제창</a>
-  <a href="info.html" class="click-btn click-info">내정보</a>
+  <!-- 홈으로 돌아가는 투명 버튼 -->
+  <a href="index.html" class="home-link" title="홈으로 이동"></a>
 
-  <!-- 메인 이미지 -->
-  <img src="main.jpg" alt="메인 이미지" />
+  <!-- 내정보 이미지 콘텐츠 -->
+  <div class="container">
+    <img src="info.jpg" alt="내 정보 이미지" />
+  </div>
 
 </body>
 </html>
